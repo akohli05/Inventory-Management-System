@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="apAddProductOuter" prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.c482pa.controllers.AddProductController">
+   <children>
+      <AnchorPane fx:id="apAddProductInner" layoutX="33.0" layoutY="20.0" prefHeight="609.0" prefWidth="834.0" style="-fx-border-color: #6e6b64; -fx-border-radius: 10;">
+         <children>
+            <Label layoutX="28.0" layoutY="22.0" text="Add Product">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tvParts" layoutX="467.0" layoutY="53.0" prefHeight="200.0" prefWidth="350.0">
+              <columns>
+                <TableColumn fx:id="colAllPartID" prefWidth="51.200042724609375" text="Part ID" />
+                <TableColumn fx:id="colAllPartName" prefWidth="79.199951171875" text="Part Name" />
+                  <TableColumn fx:id="colAllPartInv" prefWidth="99.2000732421875" text="Inventory Level" />
+                  <TableColumn fx:id="colAllPartPrice" prefWidth="118.39999999999998" text="Price/ Cost per Unit" />
+              </columns>
+            </TableView>
+            <Label fx:id="lblID" layoutX="36.0" layoutY="112.0" text="ID" />
+            <Label fx:id="lblName" layoutX="36.0" layoutY="157.0" text="Name" />
+            <Label fx:id="lblInv" layoutX="36.0" layoutY="199.0" text="Inv" />
+            <Label fx:id="lblPrice" layoutX="36.0" layoutY="243.0" text="Price" />
+            <Label fx:id="lblMax" layoutX="36.0" layoutY="290.0" text="Max" />
+            <TextField fx:id="tfInv" layoutX="100.0" layoutY="195.0" />
+            <TextField fx:id="tfName" layoutX="100.0" layoutY="153.0" />
+            <TextField fx:id="tfMax" layoutX="100.0" layoutY="286.0" />
+            <TextField fx:id="tfPrice" layoutX="100.0" layoutY="239.0" />
+            <TextField fx:id="tfID" editable="false" layoutX="100.0" layoutY="108.0" style="-fx-background-color: #d9d9d9;" text="Auto Gen- Disabled ">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lblMin" layoutX="268.0" layoutY="290.0" text="Min" />
+            <TextField fx:id="tfMin" layoutX="317.0" layoutY="286.0" />
+            <Button fx:id="btnAddPart" layoutX="733.0" layoutY="271.0" mnemonicParsing="false" onAction="#addPart" text="Add" />
+            <Button fx:id="btnSave" layoutX="626.0" layoutY="570.0" mnemonicParsing="false" onAction="#handleSaveProduct" text="Save" />
+            <Button fx:id="btnCancel" layoutX="733.0" layoutY="570.0" mnemonicParsing="false" onAction="#handleCancelProduct" text="Cancel" />
+            <Button fx:id="btnDeletePart" layoutX="637.0" layoutY="524.0" mnemonicParsing="false" onAction="#handleDeletePart" text="Remove Associated Part" />
+            <TableView fx:id="tvRelatedParts" layoutX="471.0" layoutY="315.0" prefHeight="200.0" prefWidth="350.0">
+               <columns>
+                  <TableColumn fx:id="colAssocPartID" prefWidth="51.200042724609375" text="Part ID" />
+                  <TableColumn fx:id="colAssocPartName" prefWidth="79.199951171875" text="Part Name" />
+                  <TableColumn fx:id="colAssocPartInv" prefWidth="99.2000732421875" text="Inventory Level" />
+                  <TableColumn fx:id="colAssocPartPrice" prefWidth="118.39999999999998" text="Price/ Cost per Unit" />
+               </columns>
+            </TableView>
+            <TextField fx:id="tfPartSearch" layoutX="660.0" layoutY="18.0" onAction="#handlePartSearch" prefHeight="26.0" prefWidth="156.0" promptText="Search by Part ID or Name">
+               <font>
+                  <Font name="System Italic" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

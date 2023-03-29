@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"com.example.c482pa","l":"com.example.c482pa.controllers"},{"m":"com.example.c482pa","l":"com.example.c482pa.main"},{"m":"com.example.c482pa","l":"com.example.c482pa.model"}];updateSearchResults();
